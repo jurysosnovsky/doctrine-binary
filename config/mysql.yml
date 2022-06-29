@@ -1,0 +1,8 @@
+doctrine:
+    orm:
+        dql:
+            numeric_functions:
+                BIT_COUNT: DoctrineBinary\Mysql\BitCount
+                BIT_AND: DoctrineBinary\Mysql\BitAnd
+                BIT_OR: DoctrineBinary\Mysql\BitOr
+                BIT_XOR: DoctrineBinary\Mysql\BitXor

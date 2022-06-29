@@ -1,0 +1,14 @@
+doctrine:
+    orm:
+        dql:
+            numeric_functions:
+                ZEROFILL: DoctrineBinary\Oracle\ZeroFill
+                BITAND: DoctrineBinary\Oracle\BitAnd
+                BITCLEAR: DoctrineBinary\Oracle\BitClear
+                BITNOT: DoctrineBinary\Oracle\BitNot
+                BITOR: DoctrineBinary\Oracle\BitOr
+                BITROTATE: DoctrineBinary\Oracle\BitRotate
+                BITSET: DoctrineBinary\Oracle\BitSet
+                BITSHIFT: DoctrineBinary\Oracle\BitShift
+                BITTEST: DoctrineBinary\Oracle\BitTest
+                BITXOR: DoctrineBinary\Oracle\BitXor

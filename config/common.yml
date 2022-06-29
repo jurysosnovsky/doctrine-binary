@@ -1,0 +1,10 @@
+doctrine:
+    orm:
+        dql:
+            numeric_functions:
+                BITAND: DoctrineBinary\Common\BitAnd
+                BITINV: DoctrineBinary\Common\BitInversion
+                BITOR: DoctrineBinary\Common\BitOr
+                BITXOR: DoctrineBinary\Common\BitXor
+                LSHIFT: DoctrineBinary\Common\LeftShift
+                RSHIFT: DoctrineBinary\Common\RightShift

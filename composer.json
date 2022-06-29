@@ -1,0 +1,46 @@
+{
+    "name": "jurysosnovsky/doctrine-binary",
+    "type": "library",
+    "description": "The extension to Doctrine 2 that add support for binary functions and bitwise operators available in MySQL, PostgreSQL, Oracle and SQLite.",
+    "keywords": [
+        "doctrine",
+        "orm",
+        "database",
+        "binary",
+        "bitwise",
+        "mysql",
+        "postgresql",
+        "oracle",
+        "sqlite"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jury Sosnovsky",
+            "email": "github@sosnoffsky.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2 || ^8.0",
+        "doctrine/orm": "^2.7"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.8.0",
+        "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0",
+        "symfony/cache": "^6.1",
+        "symfony/yaml": "^4.4 || ^5.3 || ^6.0"
+    },
+    "autoload": {
+        "psr-4": {"DoctrineBinary\\" : "src/"}
+    },
+    "autoload-dev": {
+        "psr-4": {"DoctrineBinary\\Tests\\": "tests/"}
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "lint": "php-cs-fixer fix --verbose",
+        "test": "phpunit --colors=always"
+    }
+}
