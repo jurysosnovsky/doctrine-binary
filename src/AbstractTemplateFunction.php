@@ -13,7 +13,18 @@ namespace DoctrineBinary;
 
 use Doctrine\ORM\Query\AST\Functions\FunctionNode;
 
+/**
+ * The abstract class from FunctionNode.
+ * Define template for custom DQL function.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 abstract class AbstractTemplateFunction extends FunctionNode
 {
+    /**
+     * Get template for the DQL function.
+     *
+     * @return string Template of the DQL function
+     */
     abstract protected function getTemplate(): string;
 }

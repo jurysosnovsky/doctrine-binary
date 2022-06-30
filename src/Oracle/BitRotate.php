@@ -13,8 +13,16 @@ namespace DoctrineBinary\Oracle;
 
 use DoctrineBinary\AbstractTwoValuesFunction;
 
+/**
+ * The Oracle BitRotate function.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 class BitRotate extends AbstractTwoValuesFunction
 {
+    /**
+     * {@inheritDoc}
+     */
     protected function getTemplate(): string
     {
         return 'BitRotate(%s, %s)';

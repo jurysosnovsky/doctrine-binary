@@ -13,8 +13,16 @@ namespace DoctrineBinary\Oracle;
 
 use DoctrineBinary\AbstractTwoValuesFunction;
 
+/**
+ * The Oracle BitOr function.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 class BitOr extends AbstractTwoValuesFunction
 {
+    /**
+     * {@inheritDoc}
+     */
     protected function getTemplate(): string
     {
         return 'BitOr(%s, %s)';

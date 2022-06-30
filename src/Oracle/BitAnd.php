@@ -13,8 +13,16 @@ namespace DoctrineBinary\Oracle;
 
 use DoctrineBinary\AbstractTwoValuesFunction;
 
+/**
+ * The Oracle BitAnd function.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 class BitAnd extends AbstractTwoValuesFunction
 {
+    /**
+     * {@inheritDoc}
+     */
     protected function getTemplate(): string
     {
         return 'BitAnd(%s, %s)';

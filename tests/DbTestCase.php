@@ -17,20 +17,35 @@ use Doctrine\ORM\ORMSetup;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Cache\Adapter\ArrayAdapter;
 
+/**
+ * Common test case class for testing database.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 class DbTestCase extends TestCase
 {
+    /**
+     * Configuration type, defined in child classes.
+     */
     public const CONFIG_TYPE = null;
 
     /**
+     * Entity manager of Doctrine fot testing.
+     *
      * @var EntityManager
      */
     public $entityManager;
 
     /**
+     * Configuration.
+     *
      * @var Configuration
      */
     protected $configuration;
 
+    /**
+     * {@inheritDoc}
+     */
     public function setUp(): void
     {
         $this->configuration = new Configuration();
@@ -58,7 +73,16 @@ class DbTestCase extends TestCase
         $this->entityManager = EntityManager::create($connectionOptions, $this->configuration);
     }
 
-    public function assertDqlWithGeneratedSql($dql, $sql, $params = [])
+    /**
+     * Asstert DQL query with expected SQL query.
+     *
+     * @param string $dql    DQL query
+     * @param string $sql    Expected SQL result
+     * @param array  $params Addition parameters
+     *
+     * @return void
+     */
+    public function assertDqlWithGeneratedSql(string $dql, string $sql, array $params = [])
     {
         $query = $this->entityManager->createQuery($dql);
 
@@ -69,11 +93,5 @@ class DbTestCase extends TestCase
         $generatedSql = $query->getSql();
 
         $this->assertEquals($sql, $generatedSql);
-    }
-
-    protected function loadConfig(string $configurationBame)
-    {
-        $loader = new ConfigurationLoader($this->configuration);
-        $loader->load($configurationBame);
     }
 }

@@ -11,16 +11,36 @@
 
 namespace DoctrineBinary;
 
+use Doctrine\ORM\Query\AST\ArithmeticTerm;
+use Doctrine\ORM\Query\AST\SimpleArithmeticExpression;
 use Doctrine\ORM\Query\Lexer;
 use Doctrine\ORM\Query\Parser;
 use Doctrine\ORM\Query\SqlWalker;
 
+/**
+ * Abstract class for DQL function with two parameters.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 abstract class AbstractTwoValuesFunction extends AbstractTemplateFunction
 {
+    /**
+     * First function parameter.
+     *
+     * @var SimpleArithmeticExpression|ArithmeticTerm|null
+     */
     private $firstValueExpression = null;
 
+    /**
+     * Second function parameter.
+     *
+     * @var SimpleArithmeticExpression|ArithmeticTerm|null
+     */
     private $secondValueExpression = null;
 
+    /**
+     * {@inheritDoc}
+     */
     public function getSql(SqlWalker $sqlWalker)
     {
         return sprintf(
@@ -30,6 +50,9 @@ abstract class AbstractTwoValuesFunction extends AbstractTemplateFunction
         );
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function parse(Parser $parser)
     {
         $parser->match(Lexer::T_IDENTIFIER);

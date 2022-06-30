@@ -13,8 +13,16 @@ namespace DoctrineBinary\Postgresql;
 
 use DoctrineBinary\AbstractTwoValuesFunction;
 
+/**
+ * The PostgreSQL bitwise XOR (#) operator.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 class BitXor extends AbstractTwoValuesFunction
 {
+    /**
+     * {@inheritDoc}
+     */
     protected function getTemplate(): string
     {
         return '(%s # %s)';

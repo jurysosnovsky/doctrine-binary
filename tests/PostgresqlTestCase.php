@@ -11,7 +11,15 @@
 
 namespace DoctrineBinary\Tests;
 
+/**
+ * Test case for PostgreSQL bitwise operators and functions.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 class PostgresqlTestCase extends DbTestCase
 {
+    /**
+     * {@inheritDoc}
+     */
     public const CONFIG_TYPE = ConfigurationLoader::POSTGRES;
 }

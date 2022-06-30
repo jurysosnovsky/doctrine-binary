@@ -13,8 +13,16 @@ namespace DoctrineBinary\Mysql;
 
 use DoctrineBinary\AbstractAggregateFunction;
 
+/**
+ * The MySQL BIT_AND aggregate function.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 class BitAnd extends AbstractAggregateFunction
 {
+    /**
+     * {@inheritDoc}
+     */
     protected function getFunctionName(): string
     {
         return 'BIT_AND';

@@ -11,7 +11,15 @@
 
 namespace DoctrineBinary\Tests;
 
+/**
+ * Test case for MySQL bitwise operators and functions.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 class MysqlTestCase extends DbTestCase
 {
+    /**
+     * {@inheritDoc}
+     */
     public const CONFIG_TYPE = ConfigurationLoader::MYSQL;
 }

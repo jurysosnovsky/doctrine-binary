@@ -13,8 +13,16 @@ namespace DoctrineBinary\Common;
 
 use DoctrineBinary\AbstractTwoValuesFunction;
 
+/**
+ * The common bitwise right shift (>>) operator.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 class RightShift extends AbstractTwoValuesFunction
 {
+    /**
+     * {@inheritDoc}
+     */
     protected function getTemplate(): string
     {
         return '(%s >> %s)';

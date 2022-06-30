@@ -13,8 +13,18 @@ namespace DoctrineBinary\Tests\Mysql;
 
 use DoctrineBinary\Tests\MysqlTestCase;
 
+/**
+ * Test case for MySQL BIT_AND aggregate function.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 class BitAndTest extends MysqlTestCase
 {
+    /**
+     * Test case for select.
+     *
+     * @return void
+     */
     public function testSelect()
     {
         $this->assertDqlWithGeneratedSql(

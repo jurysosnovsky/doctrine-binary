@@ -11,7 +11,15 @@
 
 namespace DoctrineBinary\Tests;
 
+/**
+ * Test case for Oracle bitwise operators and functions.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 class OracleTestCase extends DbTestCase
 {
+    /**
+     * {@inheritDoc}
+     */
     public const CONFIG_TYPE = ConfigurationLoader::ORACLE;
 }

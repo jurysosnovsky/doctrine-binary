@@ -13,8 +13,16 @@ namespace DoctrineBinary\Mysql;
 
 use DoctrineBinary\AbstractOneValueFunction;
 
+/**
+ * The MySQL BIT_COUNT function.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 class BitCount extends AbstractOneValueFunction
 {
+    /**
+     * {@inheritDoc}
+     */
     protected function getTemplate(): string
     {
         return 'BIT_COUNT(%s)';

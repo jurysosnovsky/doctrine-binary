@@ -13,8 +13,18 @@ namespace DoctrineBinary\Tests\Mysql;
 
 use DoctrineBinary\Tests\MysqlTestCase;
 
+/**
+ * Test case for MySQL BIT_COUNT function.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 class BitCountTest extends MysqlTestCase
 {
+    /**
+     * Test case for select.
+     *
+     * @return void
+     */
     public function testSelect()
     {
         $this->assertDqlWithGeneratedSql(
@@ -23,6 +33,11 @@ class BitCountTest extends MysqlTestCase
         );
     }
 
+    /**
+     * Test case for where.
+     *
+     * @return void
+     */
     public function testWhere()
     {
         $this->assertDqlWithGeneratedSql(
@@ -31,6 +46,11 @@ class BitCountTest extends MysqlTestCase
         );
     }
 
+    /**
+     * Test case for where with parameters.
+     *
+     * @return void
+     */
     public function testWhereWithParameters()
     {
         $this->assertDqlWithGeneratedSql(

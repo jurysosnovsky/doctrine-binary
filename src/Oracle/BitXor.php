@@ -13,8 +13,16 @@ namespace DoctrineBinary\Oracle;
 
 use DoctrineBinary\AbstractTwoValuesFunction;
 
+/**
+ * The Oracle BitXor function.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 class BitXor extends AbstractTwoValuesFunction
 {
+    /**
+     * {@inheritDoc}
+     */
     protected function getTemplate(): string
     {
         return 'BitXor(%s, %s)';

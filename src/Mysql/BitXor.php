@@ -13,8 +13,16 @@ namespace DoctrineBinary\Mysql;
 
 use DoctrineBinary\AbstractAggregateFunction;
 
+/**
+ * The MySQL BIT_xOR aggregate function.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 class BitXor extends AbstractAggregateFunction
 {
+    /**
+     * {@inheritDoc}
+     */
     protected function getFunctionName(): string
     {
         return 'BIT_XOR';

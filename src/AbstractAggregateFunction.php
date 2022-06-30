@@ -17,16 +17,38 @@ use Doctrine\ORM\Query\Lexer;
 use Doctrine\ORM\Query\Parser;
 use Doctrine\ORM\Query\SqlWalker;
 
+/**
+ * The abstract class for custom aggregate DQL function.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 abstract class AbstractAggregateFunction extends FunctionNode
 {
-    /** @var AggregateExpression */
+    /**
+     * Aggregate expression.
+     *
+     * @var AggregateExpression|null
+     */
     private $aggregateExpression = null;
 
+    /**
+     * Get aggregate function name.
+     *
+     * @return string Fynction name
+     */
+    abstract protected function getFunctionName(): string;
+
+    /**
+     * {@inheritDoc}
+     */
     public function getSql(SqlWalker $sqlWalker): string
     {
         return $this->aggregateExpression->dispatch($sqlWalker);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function parse(Parser $parser): void
     {
         $parser->match(Lexer::T_IDENTIFIER);
@@ -38,6 +60,4 @@ abstract class AbstractAggregateFunction extends FunctionNode
 
         $this->aggregateExpression = new AggregateExpression($this->getFunctionName(), $expression, false);
     }
-
-    abstract protected function getFunctionName(): string;
 }

@@ -11,7 +11,15 @@
 
 namespace DoctrineBinary\Tests;
 
+/**
+ * Test case for common bitwise operators.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 class CommonTestCase extends DbTestCase
 {
+    /**
+     * {@inheritDoc}
+     */
     public const CONFIG_TYPE = ConfigurationLoader::COMMON;
 }

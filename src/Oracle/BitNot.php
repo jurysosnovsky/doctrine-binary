@@ -13,8 +13,16 @@ namespace DoctrineBinary\Oracle;
 
 use DoctrineBinary\AbstractOneValueFunction;
 
+/**
+ * The Oracle BitNot function.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 class BitNot extends AbstractOneValueFunction
 {
+    /**
+     * {@inheritDoc}
+     */
     protected function getTemplate(): string
     {
         return 'BitNot(%s)';

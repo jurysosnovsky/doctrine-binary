@@ -13,8 +13,16 @@ namespace DoctrineBinary\Oracle;
 
 use DoctrineBinary\AbstractTwoValuesFunction;
 
+/**
+ * The Oracle zefo fill bitwise operator.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 class ZeroFill extends AbstractTwoValuesFunction
 {
+    /**
+     * {@inheritDoc}
+     */
     protected function getTemplate(): string
     {
         return '(%s >>> %s)';

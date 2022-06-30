@@ -13,8 +13,16 @@ namespace DoctrineBinary\Oracle;
 
 use DoctrineBinary\AbstractTwoValuesFunction;
 
+/**
+ * The Oracle BitTest function.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 class BitTest extends AbstractTwoValuesFunction
 {
+    /**
+     * {@inheritDoc}
+     */
     protected function getTemplate(): string
     {
         return 'BitTest(%s, %s)';

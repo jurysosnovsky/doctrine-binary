@@ -13,8 +13,18 @@ namespace DoctrineBinary\Tests\Common;
 
 use DoctrineBinary\Tests\CommonTestCase;
 
+/**
+ * Test case for common bitwise right shift (>>) operator.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 class RightShiftTest extends CommonTestCase
 {
+    /**
+     * Test case for select.
+     *
+     * @return void
+     */
     public function testSelect()
     {
         $this->assertDqlWithGeneratedSql(
@@ -23,6 +33,11 @@ class RightShiftTest extends CommonTestCase
         );
     }
 
+    /**
+     * Test case for where.
+     *
+     * @return void
+     */
     public function testWhere()
     {
         $this->assertDqlWithGeneratedSql(
@@ -31,6 +46,11 @@ class RightShiftTest extends CommonTestCase
         );
     }
 
+    /**
+     * Test case for where with parameters.
+     *
+     * @return void
+     */
     public function testWhereWithParameters()
     {
         $this->assertDqlWithGeneratedSql(

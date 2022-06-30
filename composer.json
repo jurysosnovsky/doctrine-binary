@@ -13,7 +13,7 @@
         "oracle",
         "sqlite"
     ],
-    "license": "MIT",
+    "license": "BSD-3-Clause",
     "authors": [
         {
             "name": "Jury Sosnovsky",

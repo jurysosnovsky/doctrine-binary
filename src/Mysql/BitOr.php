@@ -13,8 +13,16 @@ namespace DoctrineBinary\Mysql;
 
 use DoctrineBinary\AbstractAggregateFunction;
 
+/**
+ * The MySQL BIT_OR aggregate function.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 class BitOr extends AbstractAggregateFunction
 {
+    /**
+     * {@inheritDoc}
+     */
     protected function getFunctionName(): string
     {
         return 'BIT_OR';

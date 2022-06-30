@@ -15,6 +15,10 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity()
+ *
+ * Fake entity for testing
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
  */
 class BlankTest
 {

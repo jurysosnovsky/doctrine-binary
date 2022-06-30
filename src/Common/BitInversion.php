@@ -13,8 +13,16 @@ namespace DoctrineBinary\Common;
 
 use DoctrineBinary\AbstractOneValueFunction;
 
+/**
+ * The common bitwise not (inversion) (~) operator.
+ *
+ * @author Jury Sosnovsky <github@sosnoffsky.com>
+ */
 class BitInversion extends AbstractOneValueFunction
 {
+    /**
+     * {@inheritDoc}
+     */
     protected function getTemplate(): string
     {
         return '(~%s)';
